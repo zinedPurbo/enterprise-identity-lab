@@ -1,0 +1,5 @@
+# Unverified raw screenshots (may contain real IPs / email — never push)
+screenshots/raw/
+
+# macOS
+.DS_Store
