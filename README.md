@@ -61,13 +61,13 @@ corp.purbo.lab
 2. **Domain controller** — deploy DC01, install AD DS, create the forest
 3. **DNS** — point the VNet at the DC so clients can find the domain
 4. **Structure** — OUs + one security group per department ([`01-create-structure.ps1`](scripts/01-create-structure.ps1))
-5. **Users** — bulk-create 50 users from CSV ([`02-bulk-create-users.ps1`](scripts/02-bulk-create-users.ps1))
-6. **File shares** — per-department shares, access by group (least privilege)
+5. **Users** — bulk create 50 users from CSV ([`02-bulk-create-users.ps1`](scripts/02-bulk-create-users.ps1))
+6. **File shares** — per department shares, access by group (least privilege)
 7. **Group Policy** — password/lockout, USB block, drive maps
 8. **Client** — deploy CLIENT01, join the domain, verify policy
 9. **Help-desk operations** — the user lifecycle in script ([`03-helpdesk-scenarios.ps1`](scripts/03-helpdesk-scenarios.ps1))
-10. **Security hardening** — detection, defense-in-depth, least privilege ([`04-security-hardening.ps1`](scripts/04-security-hardening.ps1))
-11. **Attack & detect** — brute-force simulation + log analysis ([`05-attack-detect-demo.ps1`](scripts/05-attack-detect-demo.ps1))
+10. **Security hardening** — detection, defense in depth, least privilege ([`04-security-hardening.ps1`](scripts/04-security-hardening.ps1))
+11. **Attack & detect** — brute force simulation + log analysis ([`05-attack-detect-demo.ps1`](scripts/05-attack-detect-demo.ps1))
 
 Full step-by-step walkthrough: **[BUILD-GUIDE.md](BUILD-GUIDE.md)**
 
@@ -76,7 +76,7 @@ Full step-by-step walkthrough: **[BUILD-GUIDE.md](BUILD-GUIDE.md)**
 ## Proof it works
 
 **Policy follows the user by department.** Ava Johnson (HR) logs into the client
-and automatically receives the HR drive map — because she's in the HR OU. No
+and automatically receives the HR drive map because she's in the HR OU. No
 manual setup on the PC:
 
 ![gpresult showing Map Drive HR applied to an HR user](screenshots/gpresult.png)
@@ -96,12 +96,12 @@ Three defensive controls, each mapped to a core principle:
 | Control | Principle | Screenshot |
 |---------|-----------|------------|
 | Audit logging (logons, account & group changes) | **Detection** | ![auditing](screenshots/auditing.png) |
-| 16-char fine-grained password policy for Domain Admins | **Defense-in-depth** | ![admin password policy](screenshots/adminpolicy.png) |
+| 16 char fine grained password policy for Domain Admins | **Defense in depth** | ![admin password policy](screenshots/adminpolicy.png) |
 | Privileged-group membership review | **Least privilege** | — |
 
 ### Attack simulation & detection
 I ran a controlled brute-force against a lab account. It produced ten **4625**
-failed-logon events and tripped the lockout policy (**4740**) — all captured in
+failed logon events and tripped the lockout policy (**4740**) — all captured in
 the Windows Security log, the same telemetry a SOC would alert on:
 
 ![Brute-force producing 4625 and 4740 events](screenshots/bruteforce.png)
