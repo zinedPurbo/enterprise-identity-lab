@@ -5,8 +5,6 @@ security phase (hardening, auditing and detection).
 
 **Domain:** `corp.purbo.lab`  ·  **DC IP:** `10.0.0.4`  ·  **Resource group:** `rg-identity-lab`
 
-> Keep a notes file open the whole time. Write down every error and how you fixed it —
-> that becomes the "What I learned" section that interviewers care about most.
 
 **How to use this guide:** do one phase per sitting, take the 📸 screenshots as you go,
 and tick the boxes. ⚠️ marks the spots where most people get stuck.
