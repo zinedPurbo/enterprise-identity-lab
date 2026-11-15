@@ -4,7 +4,7 @@ A self built Windows enterprise identity environment running in Microsoft Azure.
 I stood up a domain controller, built out an Active Directory forest for a
 fictional company, bulk provisioned 50 users with PowerShell, enforced policy
 through Group Policy, joined a client workstation, and then **secured and
-tested** the environment including simulating a brute-force attack and
+tested** the environment including simulating a brute force attack and
 detecting it in the Windows Security log.
 
 **Domain:** `corp.purbo.lab`  ·  **Platform:** Azure (Windows Server 2022 DC + Windows 11 client)  ·  **Automation:** PowerShell
