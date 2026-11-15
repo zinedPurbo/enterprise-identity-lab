@@ -69,8 +69,6 @@ corp.purbo.lab
 10. **Security hardening** — detection, defense in depth, least privilege ([`04-security-hardening.ps1`](scripts/04-security-hardening.ps1))
 11. **Attack & detect** — brute force simulation + log analysis ([`05-attack-detect-demo.ps1`](scripts/05-attack-detect-demo.ps1))
 
-Full step-by-step walkthrough: **[BUILD-GUIDE.md](BUILD-GUIDE.md)**
-
 ---
 
 ## Proof it works
@@ -116,7 +114,6 @@ the Windows Security log, the same telemetry a SOC would alert on:
 ```
 enterprise-identity-lab/
 ├── README.md
-├── BUILD-GUIDE.md                 # full step-by-step build
 ├── scripts/
 │   ├── 01-create-structure.ps1    # OUs + security groups
 │   ├── 02-bulk-create-users.ps1   # 50 users from CSV
